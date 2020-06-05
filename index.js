@@ -86,7 +86,7 @@ class Parameter {
 
       var has = value !== null && value !== undefined;
 
-      if (!has) {
+      if (obj[key] === null || !has) {
         if (rule.required !== false) {
           errors.push({
             message: this.t('required'),
